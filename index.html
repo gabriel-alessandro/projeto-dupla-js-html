@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title> HeroesBR - Seu portal de Fire Emblem Heroes Brasileiro </title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Página exemplificando o uso do Bootstrap - Framework front-end com recursos CSS3 e JS">
+		<meta name="author" content="Derickson & Gabriel">
+		<meta name="keywords" content="Bootstrap, Frameworks, CSS3, JS, Classes, Front-end">
+		<!--Meta para ler as medias queries: -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!--Inserindo fontes do Google:-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chiaro+Std+B+Bold">
+		<!--Link do icone-->
+		<link rel="shortcut icon" href="images/icon.png">
+		<!--Incorporando CSS bootstrap:-->
+		<link rel="stylesheet" href="style/bootstrap.min.css">
+		<!--Linkando o nosso CSS:-->
+		<link rel="stylesheet" type="text/css" href="style/estilo.css">
+
+		<!--Puxando os s js:-->
+		<!--Js do Bootstrap-->
+		<script src="js/bootstrap.min.js"></script>
+		<!--Biblioteca js:-->
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/script.js"> </script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
+			 	});
+			});
+		</script>
+  </head>
+  <body id="topo">
+		<header class="jumbotron text-center container-fluid">
+			<h1> EmblemBR - Portal Brasileiro de Fire Emblem </h1>
+		</header>
+    <nav class="navbar navbar-wrapper container-fluid navbar-fixed-top">
+			<ul class="nav navbar-nav">
+				<li> <a href="index.html"><span class="glyphicon glyphicon-home"></span> Home </a> </li>
+				<li> <a href="#news" class="scroll"><span class="glyphicon glyphicon-heart"></span> News </a> </li>
+				<li> <a href="#galeria" class="scroll"><span class="glyphicon glyphicon-picture"></span> Tier List </a> </li>
+				<li> <a href="#duvidas" class="scroll"><span class="glyphicon glyphicon-earphone"></span> Dúvidas </a> </li>
+			</ul>
+		</nav>
+		<section class="container-fluid" id="background">
+			<div class="row"><!--INÍCIO PRIMEIRA LINHA-->
+				<!--PRIMEIRA CAIXA-->
+				<div id="home" class="col-sm-12">
+
+					<h2> Quem somos? </h2>
+					<p>
+						A EmblemBR é o portal nº1 de Fire Emblem brasileiro, trazendo as mais novas notícias e updates sobre a franquia. Focamos nosso conteúdo principalmente no jogo mobile Heroes, pois é o mais recente e é constantemente atualizado, trazendo novos mapas, personagens, eventos, desafios e missões! Utilize nosso fórum de dúvidas para debater assuntos com a comunidade!
+					</p>
+
+				</div>
+
+				<div id="news" class="col-sm-12">
+
+					<h2 class="text-center"> Últimas novidades: </h2>
+					<iframe src="wowslider.html" style="width:800px;height:600px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
+				</div>
+
+				<div id="galeria" class="col-sm-12">
+
+					<h2> Tier List </h2>
+					<img src="images/meta.jpg" class="img-responsive" id="tier"> </img>
+
+				</div>
+
+				<div id="duvidas" class="col-sm-12">
+		        <div class="col-sm-12">
+		          <h2 class="text-center"> Dúvidas </h2>
+		          <form method="post" name="form1" action="index.html" onsubmit="return validar()">
+		            <div class="form-group">
+		              <label id="n"> Nome: </label>
+		              <input type="text" name="nome" placeholder="Nome" class="form-control" id="nome" required>
+		            </div>
+
+		            <div class="form-group">
+		              <label id="e"> E-mail: </label>
+		              <input type="email" name="email" placeholder="E-mail" class="form-control" id="email" required>
+		            </div>
+
+		            <div class="form-group">
+		              <label id="m"> Mensagem: </label>
+		              <textarea name="msg" cols="30" rows="6" placeholder="Digite aqui..." class="form-control" id="mensagem" required></textarea>
+		            </div>
+		            <input type="submit" name="envia" value="Enviar" class="btn btn-primary">
+		            <input type="reset" name="limpa" value="Limpar" class="btn btn-primary">
+		          </form>
+							<p id="erro" style="color:red"></p>
+		      </div>
+				</div>
+
+				<a href="#topo" title="Topo da página" class="scroll">
+					<img src="images/topo.png" alt="Seta Topo para voltar ao topo da página" id="imgtopo">
+				</a>
+
+			</div>
+		</section>
+			<footer class="container-fluid">
+				<span>
+					Todos os direitos reservados à Nintendo©
+				</span>
+			</footer>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+@charset "UTF-8";
+@author "Derickson & Gabriel";
+
+p{
+  color: #000;
+  text-align: justify;
+  text-indent:25px;
+  font-size: 1.2em;
+}
+
+body{
+  background-color: #4F4F4F;
+}
+
+header{
+  background-image: url(../images/header.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-bottom:10px !important;
+  height: 450px;
+}
+
+footer{
+	background-color: #fff;
+	color: #000;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+
+}
+
+li{
+  color: #fff;
+}
+
+h1,h2{
+  color: #000;
+  font-family: Chiaro Std;
+}
+
+.navbar-wrapper{
+  background-color: black;
+  font-size: 1.2em;
+  font-family: Chiaro Std;
+}
+
+.jumbotron{
+  padding-top: 240px;
+  color: lightyellow;
+  text-shadow: 4px 4px 6px black;
+}
+
+#galeria{
+    text-align: center;
+}
+
+#tier{
+  margin: 0 auto;
+}
+
+#duvidas{
+  height: 500px;
+}
+
+#imgtopo{
+	position: fixed;
+	bottom: 50px;
+	right: 2px;
+	width: 50px;
+}
+
+@media screen and (max-width: 960px) {
+  iframe{
+    height: 588px;
+  }
+
+  header{
+    height: 360px;
+  }
+
+  .jumbotron{
+    padding-top: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  iframe{
+    height: 555px !important;
+  }
+
+  header{
+    height: 330px;
+  }
+
+  .jumbotron{
+    padding-top: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  iframe{
+    height: 339px !important;
+  }
+
+  header{
+    height: 200px;
+  }
+
+  .jumbotron{
+    padding-top: 100px;
+  }
+
+  .navbar{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  iframe{
+    height: 234px !important;
+  }
+
+  header{
+    height: 140px;
+  }
+
+  .jumbotron{
+    padding: 100px 0 0 0;
+  }
+
+  .jumbotron h1{
+    font-size: 1em !important;
+  }
+}
